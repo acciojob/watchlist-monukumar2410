@@ -52,7 +52,18 @@ public class MovieRepository {
 
         return directorMovieMap.get(name);
     }
+    
+    public String getDirectorByMovieName(String movie){
 
+        
+        for(String director : directorMovieMap.keySet()){
+            List<String> movies = directorMovieMap.get(director);
+            if(movies.contains(movie)){
+                return director;
+            }
+        }
+        return "plz enter a valid movie";
+    }
     public List<String> findAllMovies(){
         
         List<String> movies = new ArrayList<>();
