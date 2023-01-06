@@ -53,12 +53,12 @@ public class MovieRepository {
         return directorMovieMap.get(name);
     }
     
-    public String getDirectorByMovieName(String movie){
+    public String getDirectorByMovieName(String name){
 
         
         for(String director : directorMovieMap.keySet()){
             List<String> movies = directorMovieMap.get(director);
-            if(movies.contains(movie)){
+            if(movies.contains(name)){
                 return director;
             }
         }

@@ -38,9 +38,9 @@ public class MovieService {
         return movieRepository.getDirectorByName(name);
     }
 
-    public String getDirectorByMovieName(String movie){
+    public String getDirectorByMovieName(String name){
 
-        return movieRepository.getDirectorByMovieName(movie);
+        return movieRepository.getDirectorByMovieName(name);
     }
 
     public List<String> getMoviesByDirectorName(String name){
